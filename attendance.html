@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+
+        }
+
+         body{
+            background-color: #d4e4d4;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+
+        }
+        .sidebar{
+            width: 40vmin;
+            height: 100vh;
+            margin-left: 0;
+            background-color:#808874;  
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+           
+            
+      
+        }
+      .logo img {
+        margin-left: 10vmin;
+        height:20vmin ;
+        margin-right: 10vmin;
+      }
+      h3 {
+       text-align: center;
+       
+      }
+
+       a {
+        
+        display: flex;
+        color:black;
+        margin-left: 9vmin;
+        margin-top: 5vmin;
+        text-decoration: none;
+        margin-bottom: 3vmin;
+        padding-top: 1vmin;
+        
+     }
+     #logout{
+       background-color: white; 
+       border-radius: 3vmin;
+       padding: 1vmin 2vmin;
+       border: none;
+       padding-top: 1vmin;
+       margin-top: 3vmin;
+
+     }
+
+        #dashboardicon {
+            width: 3vmin;
+            height: 3vmin;
+            display: flex;
+            padding-right: 2vmin;
+            margin-left: 1vmin;
+        }
+
+        #tutorialicon {
+            width: 3vmin;
+            height: 3vmin;
+            display: flex;
+            padding-right: 2vmin;
+            margin-left: 1vmin;
+        }
+
+        #attendanceicon {
+            width: 3vmin;
+            height: 3vmin;
+            display: flex;
+            padding-right: 2vmin;
+            margin-left: 1vmin;
+        }
+
+        #habiticon {
+            width: 3vmin;
+            height: 3vmin;
+            display: flex;
+            padding-right: 2vmin;
+            margin-left: 1vmin;
+        }
+
+        #timetableicon {
+            width: 3vmin;
+            height: 3vmin;
+            display: flex;
+            padding-right: 2vmin;
+            margin-left: 1vmin;
+        }
+
+        #plannericon {
+            width: 3vmin;
+            height: 3vmin;
+            display: flex;
+            padding-right: 2vmin;
+            margin-left: 1vmin;
+        }
+
+        .middle {
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .navbar a:hover {
+            background-color: #bcc0b7;
+            padding: 0.1vmin 0.1vmin;
+            border-radius: 1vmin;
+            transition: 0.3s;
+        }
+
+        #logout:hover {
+            background-color: #bcc0b7;
+            color:black;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .welcome:hover {
+            background-color: #427D9D;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .box-content:hover {
+            background-color: #427D9D;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .tutorial-container {
+            height: 40vmin;
+            width: 160vmin;
+            margin-right: 60vmin;
+            margin-left: 5vmin;
+            margin-bottom: 40vmin;
+          
+        }
+
+        .title {
+            margin-left: 1vmin;
+            font-size: 4vmin;
+            margin-bottom: 3vmin;
+        }
+
+        .tutorial-table {
+            margin-left: 22vmin;
+            padding-left: 1vmin;
+            padding-top: 2vmin;
+            padding-bottom: 2vmin;
+            width: 100vmin;
+            height: 10vmin;
+            margin-right: 10vmin;
+           overflow: auto;
+
+        }
+
+        .tutorial-table th {
+            text-align: center;
+            padding: 2vmin;
+            background-color: #979a93;
+           
+        }
+
+        .tutorial-table td {
+            text-align: center;
+            padding: 1vmin;
+            background-color: #bcc0b7;
+            
+        }
+        .table-box {
+            overflow-y: auto;
+        }
+        
+
+        .Absent {
+            color: rgb(177, 28, 28);
+        }
+
+        .Present {
+            color: green;
+        }
+
+        .middle {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .upper {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            height: 25vmin;
+            width: 80vmin;
+            margin-left: 20vmin;
+            margin-top: 1vmin;
+        }
+
+        .upper #box1,
+        .upper #box2,
+        .upper #box3 {
+            display: flex;
+            flex-direction: column;
+            height: 5vmin;
+            width: 5vmin; 
+            border-radius: 1vmin;
+            margin-bottom: 50vmin;
+        }
+
+        .upper #box1 p {
+            margin-top: 1vmin;
+            font-size: 3vmin;
+            align-self: center;
+        }
+
+        .upper #box2 p {
+            margin-top: 1vmin;
+            font-size: 3vmin;
+            align-self: center;
+        }
+
+        .upper #box3 p {
+            margin-top: 1vmin;
+            font-size: 3vmin;
+            align-self: center;
+        }
+
+        .form {
+            height: 5vmin;
+            margin-left: 23vmin;
+            margin-bottom: 3vmin;
+            margin-top: 2vmin;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #subject,
+        #attendance,
+        #pre {
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        #date {
+            width: 20vmin;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        #submit {
+            background-color: #bcc0b7;
+            color: #000000;
+            width: 13vmin;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .deleteBtn{
+            background-color: #bcc0b7;
+            color: #000000;
+            width: 13vmin;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="sidebar">
+        <nav class="nav">
+            <div class="logo"><img src="./assets/img/login.png">
+                <h3>Student</h3>
+            </div>
+
+            <div class="navbar">
+                <ul>
+                    <li><a href="dashboard.html"> <img src="./assets/img/dashboards.png" id="dashboardicon"> Dashboard
+                        </a></li>
+                    <li><a href="Tutorial.html"> <img src="./assets/img/assignments.png" id="tutorialicon">Tutorial</a>
+                    </li>
+                    <li><a href="attendance.html"><img src="./assets/img/attendance.png"
+                                id="attendanceicon">attendance</a></li>
+                    <li><a href="habit.html"><img src="./assets/img/habits.png" id="habiticon">Habit</a></li>
+                    <li><a href="timetable.html"><img src="./assets/img/timetable.png" id="timetableicon">Timetable</a>
+                    </li>
+                    <li><a href="study-planner.html"><img src="./assets/img/planner.png"
+                                id="plannericon">Study-planner</a></li>
+                </ul>
+            </div>
+
+            <div class="logout"><button id="logout">Log out</button></div>
+
+        </nav>
+    </div>
+    <div class="middle">
+        <div class="upper">
+            <div id="box1">
+                <img src="assets\img\assignments.png" > 
+                <p>Total Present </p>
+                <p>0</p>
+            </div>
+
+            <div id="box2">
+                <img src="assets\img\assignments.png"> 
+                <p>Total absent  </p>
+                <p>0</p>
+            </div>
+
+            <div id="box3">
+                <img src="assets\img\assignments.png"> 
+                <p>Total </p>
+                <p>0</p>
+            </div>
+        </div>
+        <div class="form">
+            <input id="subject" type="text" placeholder="Enter Subject">
+            <input id="attendance" type="text" placeholder="Enter Task">
+            <input id="date" type="date">
+            <input id="pre" type="text" placeholder="Enter Present / Absent">
+            <button id="submit">Submit</button>
+            <button class="deleteBtn">Delete</button>
+        </div>
+
+        <div class="table-box">
+            <table class="tutorial-table">
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Task</th>
+                        <th>Due Date</th>
+                        <th>Attendance</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Enter subject</td>
+                        <td>Enter task</td>
+                        <td> Enter Date</td>
+                        <td><span class="status">Status</span></td>
+                    </tr>
+
+                  
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="assets/js/attendance.js"></script>
+</body>
+
+</html>

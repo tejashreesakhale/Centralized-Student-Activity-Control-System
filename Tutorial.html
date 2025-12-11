@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+
+        }
+
+        body {
+            background-color: #d4e4d4;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+
+        }
+
+        .sidebar {
+            width: 40vmin;
+            height: 100vh;
+            margin-left: 0;
+            background-color: #808874;
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+
+
+
+        }
+
+        .logo img {
+            margin-left: 10vmin;
+            height: 20vmin;
+            margin-right: 10vmin;
+        }
+
+        h3 {
+            text-align: center;
+
+        }
+
+        a {
+
+            display: flex;
+            color: black;
+            margin-left: 9vmin;
+            margin-top: 5vmin;
+            text-decoration: none;
+            margin-bottom: 3vmin;
+            padding-top: 1vmin;
+
+        }
+
+        #logout {
+            background-color: white;
+            border-radius: 3vmin;
+            padding: 1vmin 2vmin;
+            border: none;
+            padding-top: 1vmin;
+            margin-top: 3vmin;
+
+        }
+
+        #dashboardicon {
+            width: 3vmin;
+            height: 3vmin;
+            display: flex;
+            padding-right: 2vmin;
+            margin-left: 1vmin;
+
+
+        }
+
+        #tutorialicon {
+            width: 3vmin;
+            height: 3vmin;
+            display: flex;
+            padding-right: 2vmin;
+            margin-left: 1vmin;
+
+        }
+
+        #attendanceicon {
+            width: 3vmin;
+            height: 3vmin;
+            display: flex;
+            padding-right: 2vmin;
+            margin-left: 1vmin;
+
+        }
+
+        #habiticon {
+            width: 3vmin;
+            height: 3vmin;
+            display: flex;
+            padding-right: 2vmin;
+            margin-left: 1vmin;
+
+        }
+
+        #timetableicon {
+            width: 3vmin;
+            height: 3vmin;
+            display: flex;
+            padding-right: 2vmin;
+            margin-left: 1vmin;
+
+        }
+
+        #plannericon {
+            width: 3vmin;
+            height: 3vmin;
+            display: flex;
+            padding-right: 2vmin;
+            margin-left: 1vmin;
+
+        }
+
+        .middle {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .welcome {
+            height: 10vmin;
+            width: 50vmin;
+            border: 1px solid transparent;
+            margin-bottom: 60vmin;
+            margin-left: 10vmin;
+
+        }
+
+        .welcome h1 {
+            font-size: 7vmin;
+
+
+        }
+
+        .navbar a:hover {
+            background-color: #bcc0b7;
+            padding: 0.1vmin 0.1vmin;
+            border-radius: 1vmin;
+            transition: 0.3s;
+        }
+
+        #logout:hover {
+            background-color: #bcc0b7;
+            color: black;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .box-content:hover {
+            background-color: #427D9D;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .tutorial-container {
+            height: 40vmin;
+            width: 160vmin;
+            margin-right: 20vmin;
+            margin-bottom: 40vmin;
+        }
+
+        .title {
+            margin-left: 65vmin;
+            font-size: 4vmin;
+            margin-bottom: 2vmin;
+
+
+
+        }
+
+        .table-box {
+            padding-left: 1vmin;
+            padding-top: 2vmin;
+            padding-bottom: 2vmin;
+            width: 100vmin;
+            height: 40vmin;
+
+            margin-right: 10vmin;
+
+        }
+
+        .tutorial-table {
+            width: 100%;
+            border-collapse: initial;
+        }
+
+        .tutorial-table th {
+            text-align: center;
+            padding: 2vmin;
+            background-color: #979a93;
+
+        }
+
+        .tutorial-table td {
+            text-align: center;
+            padding: 2vmin;
+            background-color: #bbbdb7;
+        }
+
+        .remove {
+            text-align: center;
+            padding: 2vmin;
+
+        }
+
+        #add {
+            margin-left: 1vmin;
+            margin-bottom: 2vmin;
+            padding: 1vmin 1vmin;
+            font-size: 2vmin;
+        }
+
+        .status-pending {
+            color: rgb(174, 86, 86);
+        }
+
+        .status-completed {
+            color: green;
+        }
+
+        .form {
+            height: 5vmin;
+            margin-left: 8vmin;
+            margin-bottom: 3vmin;
+            margin-top: 2vmin;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #subject,
+        #attendance,
+        #pre {
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        #date {
+            width: 20vmin;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        #submit {
+            background-color: #bcc0b7;
+            color: #000000;
+            width: 13vmin;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .deleteBtn {
+            background-color: #bcc0b7;
+            color: #000000;
+            width: 13vmin;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="sidebar">
+        <nav class="nav">
+            <div class="logo"><img src="\assets\img\login.png">
+                <h3>Student</h3>
+            </div>
+
+            <div class="navbar">
+                <ul>
+                    <li>
+                        <a href="dashboard.html"> <img src="\assets\img\dashboards.png" id="dashboardicon"> Dashboard
+                        </a>
+                        <a href="Tutorial.html"> <img src="\assets\img\assignments.png" id="tutorialicon">Tutorial</a>
+                        <a href="attendance.html"><img src="\assets\img\attendance.png"
+                                id="attendanceicon">attendance</a>
+                        <a href="habit.html"><img src="\assets\img\habits.png" id="habiticon">Habit</a>
+                        <a href="timetable.html"><img src="\assets\img\timetable.png" id="timetableicon">Timetable</a>
+                        <a href="study-planner.html"><img src="\assets\img\planner.png"
+                                id="plannericon">Study-planner</a>
+
+                    </li>
+                </ul>
+            </div>
+
+            <div class="logout"><button id="logout">Log out</button></div>
+
+        </nav>
+    </div>
+
+
+    <div class="tutorial-container">
+        <h2 class="title">Tutorials</h2>
+        <button id="add">Add Tutorials</button>
+        <div class="form">
+            <input id="subject" type="text" placeholder="Enter Subject">
+            <input id="attendance" type="text" placeholder="Tasks">
+            <input id="date" type="date">
+            <input id="pre" type="text" placeholder="Status">
+            <button id="submit">Submit</button>
+            <button class="deleteBtn">Delete</button>
+        </div>
+        <div class="table-box">
+            <table class="tutorial-table">
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Tutorial</th>
+                        <th>Due Date</th>
+                        <th>Status</th>
+                        <th>Remove</th>
+
+
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Enter subject</td>
+                        <td>Enter tutorial</td>
+                        <td>Enter date</td>
+                        <td><span class="status-Enter">Enter status</span></td>
+                        <td><span class="Remove">Remove</span></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+    <script src="assets/js/tutorial.js">
+    </script>
+</body>
+
+</html>

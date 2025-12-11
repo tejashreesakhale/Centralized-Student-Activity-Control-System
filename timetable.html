@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timetable</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+
+        }
+
+        body {
+            background-color: #d4e4d4;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+
+        }
+
+        .sidebar {
+            width: 40vmin;
+            height: 100vh;
+            margin-left: 0;
+            background-color: #808874;
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+
+
+
+        }
+
+        .logo img {
+            margin-left: 10vmin;
+            height: 20vmin;
+            margin-right: 10vmin;
+        }
+
+        h3 {
+            text-align: center;
+
+        }
+
+        a {
+
+            display: flex;
+            color: black;
+            margin-left: 9vmin;
+            margin-top: 5vmin;
+            text-decoration: none;
+            margin-bottom: 3vmin;
+            padding-top: 1vmin;
+
+        }
+
+        #logout {
+            background-color: white;
+            border-radius: 3vmin;
+            padding: 1vmin 2vmin;
+            border: none;
+            padding-top: 1vmin;
+            margin-top: 3vmin;
+
+        }
+
+        #dashboardicon {
+            width: 3vmin;
+            height: 3vmin;
+            display: flex;
+            padding-right: 2vmin;
+            margin-left: 1vmin;
+
+
+        }
+
+        #tutorialicon {
+            width: 3vmin;
+            height: 3vmin;
+            display: flex;
+            padding-right: 2vmin;
+            margin-left: 1vmin;
+
+        }
+
+        #attendanceicon {
+            width: 3vmin;
+            height: 3vmin;
+            display: flex;
+            padding-right: 2vmin;
+            margin-left: 1vmin;
+
+        }
+
+        #habiticon {
+            width: 3vmin;
+            height: 3vmin;
+            display: flex;
+            padding-right: 2vmin;
+            margin-left: 1vmin;
+
+        }
+
+        #timetableicon {
+            width: 3vmin;
+            height: 3vmin;
+            display: flex;
+            padding-right: 2vmin;
+            margin-left: 1vmin;
+
+        }
+
+        #plannericon {
+            width: 3vmin;
+            height: 3vmin;
+            display: flex;
+            padding-right: 2vmin;
+            margin-left: 1vmin;
+
+        }
+
+        .navbar a:hover {
+            background-color: #bcc0b7;
+            padding: 0.1vmin 0.1vmin;
+            border-radius: 1vmin;
+            transition: 0.3s;
+        }
+
+        #logout:hover {
+            background-color: #d4e4d4;
+            color: black;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .title {
+            font-size: 30px;
+            margin-left: 5vmin;
+            margin-bottom: 600px;
+        }
+
+        .table-container {
+            background: #b6bfa9;
+
+
+
+        }
+
+        table {
+            width: 100%;
+
+            text-align: center;
+        }
+
+        thead th {
+            background: #979a93;
+            color: black;
+            padding: 20px;
+            font-size: 18px;
+        }
+
+        tbody td {
+            padding: 20px;
+
+            border: 1px solid #ddd;
+        }
+
+        .lunch-row td {
+            background: #fafafa;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .lunch {
+            color: black;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <nav class="nav">
+            <div class="logo"><img src="\assets\img\login.png">
+                <h3>Student</h3>
+            </div>
+
+            <div class="navbar">
+                <ul>
+                    <li>
+                        <a href="dashboard.html"> <img src="\assets\img\dashboards.png" id="dashboardicon"> Dashboard
+                        </a>
+                        <a href="Tutorial.html"> <img src="\assets\img\assignments.png" id="tutorialicon">Tutorial</a>
+                        <a href="attendance.html"><img src="\assets\img\attendance.png"
+                                id="attendanceicon">attendance</a>
+                        <a href="habit.html"><img src="\assets\img\habits.png" id="habiticon">Habit</a>
+                        <a href="timetable.html"><img src="\assets\img\timetable.png" id="timetableicon">Timetable</a>
+                        <a href="study-planner.html"><img src="\assets\img\planner.png"
+                                id="plannericon">Study-planner</a>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="logout"><button id="logout">Log out</button></div>
+
+        </nav>
+    </div>
+
+    <h1 class="title">Weekly Timetable</h1>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>9:30 - 10:30</td>
+                    <td>Digital Electronics</td>
+                    <td>Maths</td>
+                    <td>Signals</td>
+                    <td>EMFT</td>
+                    <td>Java</td>
+                    <td>Library</td>
+                </tr>
+
+                <tr>
+                    <td>10:30 - 11:30</td>
+                    <td>Maths</td>
+                    <td>Signals</td>
+                    <td>Digital</td>
+                    <td>Java Lab</td>
+                    <td>EMFT</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>11:30 - 12:30</td>
+                    <td>Signals</td>
+                    <td>EMFT</td>
+                    <td>Maths</td>
+                    <td>Digital</td>
+                    <td>Java</td>
+                    <td></td>
+                </tr>
+
+                <tr class="lunch-row">
+                    <td>1:00 - 2:00</td>
+                    <td colspan="6" class="lunch">Lunch Break</td>
+                </tr>
+
+                <tr>
+                    <td>2:00 - 3:00</td>
+                    <td>Java Lab</td>
+                    <td>Signals Lab</td>
+                    <td>Mini Project</td>
+                    <td>EMFT Lab</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <script src="assets/js/timetable.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+
+    }
+
+    body {
+      background-color: #d4e4d4;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+
+    }
+
+    .sidebar {
+      width: 40vmin;
+      height: 100vh;
+      margin-left: 0;
+      background-color: #808874;
+      flex-direction: column;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+
+
+
+    }
+
+    .logo img {
+      margin-left: 10vmin;
+      height: 20vmin;
+      margin-right: 10vmin;
+    }
+
+    h3 {
+      text-align: center;
+
+    }
+
+    a {
+
+      display: flex;
+      color: black;
+      margin-left: 9vmin;
+      margin-top: 5vmin;
+      text-decoration: none;
+      margin-bottom: 3vmin;
+      padding-top: 1vmin;
+
+    }
+
+    #logout {
+      background-color: white;
+      border-radius: 3vmin;
+      padding: 1vmin 2vmin;
+      border: none;
+      padding-top: 1vmin;
+      margin-top: 3vmin;
+
+    }
+
+    #dashboardicon {
+      width: 3vmin;
+      height: 3vmin;
+      display: flex;
+      padding-right: 2vmin;
+      margin-left: 1vmin;
+
+
+    }
+
+    #tutorialicon {
+      width: 3vmin;
+      height: 3vmin;
+      display: flex;
+      padding-right: 2vmin;
+      margin-left: 1vmin;
+
+    }
+
+    #attendanceicon {
+      width: 3vmin;
+      height: 3vmin;
+      display: flex;
+      padding-right: 2vmin;
+      margin-left: 1vmin;
+
+    }
+
+    #habiticon {
+      width: 3vmin;
+      height: 3vmin;
+      display: flex;
+      padding-right: 2vmin;
+      margin-left: 1vmin;
+
+    }
+
+    #timetableicon {
+      width: 3vmin;
+      height: 3vmin;
+      display: flex;
+      padding-right: 2vmin;
+      margin-left: 1vmin;
+
+    }
+
+    #plannericon {
+      width: 3vmin;
+      height: 3vmin;
+      display: flex;
+      padding-right: 2vmin;
+      margin-left: 1vmin;
+
+    }
+
+
+
+    .welcome {
+      height: 30vmin;
+      width: 90vmin;
+      background-color: #bcc0b7;
+      margin-left: 40vmin;
+      margin-bottom: 10vmin;
+      border-radius: 2vmin;
+
+
+
+    }
+
+    #wc {
+      padding-top: 3vmin;
+      padding-bottom: 2vmin;
+      font-size: 8vmin;
+    }
+
+    .welcome p {
+      margin-left: 6vmin;
+      font-size: 4vmin;
+
+    }
+
+    .box-content a {
+
+      font-size: 3vmin;
+      color: black;
+      margin-left: 2vmin;
+      margin-top: 2vmin;
+      padding-top: 4vmin;
+
+
+
+    }
+
+    .box-content {
+      height: 15vmin;
+      width: 25vmin;
+      background-color: #bcc0b7;
+      border-radius: 2vmin;
+      margin-bottom: 3vmin;
+      display: flex;
+
+      align-items: center;
+      flex-direction: column;
+      margin-left: 30vmin;
+    }
+
+    .content {
+      margin-right: 5vmin;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+
+    .navbar a:hover {
+      background-color: #bcc0b7;
+      padding: 0.1vmin 0.1vmin;
+      border-radius: 1vmin;
+      transition: 0.3s;
+    }
+
+    #logout:hover {
+      background-color: #bcc0b7;
+      color: black;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .welcome:hover {
+      background-color: #808874;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .box-content:hover {
+      background-color: #808874;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sidebar">
+    <nav class="nav">
+      <div class="logo"><img src="\assets\img\login.png">
+        <h3>Student</h3>
+      </div>
+
+      <div class="navbar">
+        <ul>
+          <li>
+            <a href="dashboard.html"> <img src="\assets\img\dashboards.png" id="dashboardicon"> Dashboard </a>
+            <a href="Tutorial.html"> <img src="\assets\img\assignments.png" id="tutorialicon">Tutorial</a>
+            <a href="attendance.html"><img src="\assets\img\attendance.png" id="attendanceicon">attendance</a>
+            <a href="habit.html"><img src="\assets\img\habits.png" id="habiticon">Habit</a>
+            <a href="timetable.html"><img src="\assets\img\timetable.png" id="timetableicon">Timetable</a>
+            <a href="study-planner.html"><img src="\assets\img\planner.png" id="plannericon">Study-planner</a>
+
+          </li>
+        </ul>
+      </div>
+
+      <div class="logout"><button id="logout">Log out</button></div>
+
+    </nav>
+  </div>
+  <div class="welcome">
+    <h3 id="wc">Welcome </h3>
+    <p>“Small Steps Lead to Big Success”</p>
+  </div>
+  <div class="content">
+
+    <div class="box-content">
+      <a href="Tutorial.html"><b>Tutorial </b></a>
+
+    </div>
+
+
+
+    <div class="box-content">
+      <a href="attendance.html"><b>Attendance <b></a>
+
+    </div>
+
+
+
+    <div class="box-content">
+      <a href="habit.html"><b>Habits </b></a>
+
+    </div>
+
+
+    <div class="box-content">
+      <a href="study-planner.html"><b>Planner </b></a>
+
+    </div>
+
+
+
+    <div class="box-content">
+      <a href="timetable.html"><b>Timetable </b></a>
+
+
+
+    </div>
+  </div>
+  <script>
+    // Highlight active sidebar link based on current page
+    const sidebarLinks = document.querySelectorAll('.navbar a');
+    const currentPage = window.location.pathname.split("/").pop();
+
+    sidebarLinks.forEach(link => {
+      const hrefPage = link.getAttribute('href');
+      if (hrefPage === currentPage) {
+        link.style.backgroundColor = '#bcc0b7';
+        link.style.borderRadius = '1vmin';
+      }
+    });
+
+    // Logout button functionality
+    const logoutBtn = document.getElementById('logout');
+    logoutBtn.addEventListener('click', () => {
+      // Clear any stored session (if using localStorage/sessionStorage)
+      localStorage.clear();
+      sessionStorage.clear();
+
+      // Redirect to login page
+      window.location.href = 'login.html';
+    });
+
+    // Optional: Dynamic welcome message
+    const welcomeText = document.getElementById('wc');
+    const hours = new Date().getHours();
+    if (hours < 12) {
+      welcomeText.textContent = "Good Morning!";
+    } else if (hours < 18) {
+      welcomeText.textContent = "Good Afternoon!";
+    } else {
+      welcomeText.textContent = "Good Evening!";
+    }
+
+    // Optional: Add hover effect for box-content using JS (already in CSS)
+    const boxes = document.querySelectorAll('.box-content');
+    boxes.forEach(box => {
+      box.addEventListener('click', () => {
+        const link = box.querySelector('a').getAttribute('href');
+        window.location.href = link;
+      });
+    });
+
+  </script>
+
+
+
+</body>
+
+</html>
