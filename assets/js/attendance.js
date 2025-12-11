@@ -114,7 +114,7 @@ logoutBtn.addEventListener('click', () => {
   sessionStorage.clear();
 
   // Redirect to login page
-  window.location.href = 'login.html';
+  window.location.href = 'index.html';
 });
 
 // Optional: Dynamic welcome message
@@ -136,5 +136,6 @@ boxes.forEach(box => {
     window.location.href = link;
   });
 });
+
 
 
