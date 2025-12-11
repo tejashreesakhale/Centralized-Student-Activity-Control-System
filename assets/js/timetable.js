@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
     sessionStorage.clear();
     
     // Redirect to login page
-    window.location.href = 'login.html';
+    window.location.href = 'index.html';
   });
 
   // Optional: Dynamic welcome message
@@ -94,5 +94,6 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = link;
     });
   });
+
 
 
